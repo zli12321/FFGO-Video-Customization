@@ -9,6 +9,14 @@ FFGO triggers I2V models ability to fuse any objects without modifying the model
 #### Coming
 - Training data details
 
+### Setup
+- Instruction to setup
+```
+conda create -n ffgo python=3.11
+
+```
+
+
 ### Test data
 - Test data is available in [Data](https://github.com/zli12321/FFGO-Video-Customization/tree/main/Data/combined_first_frames) folder. [0-data.csv](https://github.com/zli12321/FFGO-Video-Customization/blob/main/Data/combined_first_frames/0-data.csv) has the input image path and the caption to generate the video.
 - Test data materials are available in [data_materials](https://github.com/zli12321/FFGO-Video-Customization/tree/main/Data/data_materials) folder. These are materials that can form the final input image for video generations.
@@ -21,4 +29,8 @@ FFGO triggers I2V models ability to fuse any objects without modifying the model
 ```bash
 pip install "huggingface_hub[cli]"
 huggingface-cli download Wan-AI/Wan2.2-I2V-A14B --local-dir ./models/Wan2.2-I2V-A14B
+```
+2. Run inference on our example test dataset
+```
+bash 
 ```

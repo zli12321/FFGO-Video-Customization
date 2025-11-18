@@ -24,13 +24,12 @@ conda create -n ffgo python=3.11
 
 
 ### Running Inference
-1. Download [Wan2.2-I2V-14B](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B) from huggingface or modelscope. 
+1. Download [Wan2.2-I2V-14B](https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B) from huggingface or modelscope and download our Lora adapters. 
 
 ```bash
-pip install "huggingface_hub[cli]"
-huggingface-cli download Wan-AI/Wan2.2-I2V-A14B --local-dir ./models/Wan2.2-I2V-A14B
+bash download.sh
 ```
 2. Run inference on our example test dataset
 ```
-bash 
+bash example_inference.sh
 ```

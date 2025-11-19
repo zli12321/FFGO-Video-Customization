@@ -5,7 +5,6 @@ import torch
 from diffusers import FlowMatchEulerDiscreteScheduler
 from omegaconf import OmegaConf
 from PIL import Image
-import pandas as pd
 import argparse
 
 current_file_path = os.path.abspath(__file__)
@@ -237,7 +236,7 @@ def infer_video(
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Video generation with customizable model paths')
+    parser = argparse.ArgumentParser(description='Video generation from single image and caption')
     parser.add_argument(
         '--model_name',
         type=str,
@@ -263,10 +262,16 @@ def parse_args():
         help='Path to the config file'
     )
     parser.add_argument(
-        '--data_csv',
+        '--image_path',
         type=str,
-        default='./Data/combined_first_frames/0-data.csv',
-        help='Path to the data CSV file'
+        required=True,
+        help='Path to the input image'
+    )
+    parser.add_argument(
+        '--caption',
+        type=str,
+        required=True,
+        help='Caption/prompt for video generation'
     )
     parser.add_argument(
         '--output_path',
@@ -290,19 +295,47 @@ def parse_args():
         '--resolution',
         type=str,
         default=None,
-        help='Video resolution as WIDTHxHEIGHT (e.g., 1280x720). Overrides --height and --width if provided.'
+        help='Video resolution as HEIGHTxWIDTH (e.g., 720x1280). Overrides --height and --width if provided.'
+    )
+    parser.add_argument(
+        '--video_length',
+        type=int,
+        default=81,
+        help='Number of frames in the output video (default: 81)'
+    )
+    parser.add_argument(
+        '--seed',
+        type=int,
+        default=42,
+        help='Random seed for reproducibility (default: 42)'
+    )
+    parser.add_argument(
+        '--guidance_scale',
+        type=float,
+        default=6.0,
+        help='Guidance scale for generation (default: 6.0)'
+    )
+    parser.add_argument(
+        '--num_inference_steps',
+        type=int,
+        default=50,
+        help='Number of inference steps (default: 50)'
     )
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()
     
+    # Verify image path exists
+    if not os.path.exists(args.image_path):
+        raise FileNotFoundError(f"Image not found: {args.image_path}")
+    
     # Parse resolution
     if args.resolution:
         try:
             height, width = map(int, args.resolution.split('x'))
         except ValueError:
-            raise ValueError(f"Invalid resolution format: {args.resolution}. Use WIDTHxHEIGHT (e.g., 1280x720)")
+            raise ValueError(f"Invalid resolution format: {args.resolution}. Use HEIGHTxWIDTH (e.g., 720x1280)")
     else:
         height = args.height
         width = args.width
@@ -310,13 +343,17 @@ if __name__ == "__main__":
     sample_size = [height, width]
     print(f"Using resolution: {width}x{height}")
     
-    # Example call with minimal parameters
+    # Negative prompt
     negative_prompt = "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
     
-    df = pd.read_csv(args.data_csv)
-    prompts = ["ad23r2 the camera view suddenly changes. " + ele for ele in list(df['prompt'])]
-    paths = ['./Data' + ele for ele in list(df['image_path'])]
+    # Add prefix to caption
+    prompt = "ad23r2 the camera view suddenly changes. " + args.caption
     
+    print(f"Input image: {args.image_path}")
+    print(f"Caption: {args.caption}")
+    print(f"Full prompt: {prompt}")
+    
+    # Build pipeline once
     pipe, vae, boundary, device = build_wan22_pipeline(
         config_path=args.config_path,
         model_name=args.model_name,
@@ -324,14 +361,17 @@ if __name__ == "__main__":
         lora_high=args.lora_high,
     )
     
-    for i in range(len(paths)):
-        video_path = infer_video(
-            pipe, vae, boundary, device,
-            sample_size=sample_size,
-            video_length=81,
-            validation_image_start=paths[i],
-            prompt=prompts[i],
-            save_path=args.output_path,
-            negative_prompt=negative_prompt
-        )
-        print(f"Video saved to: {video_path}")
+    # Generate video
+    video_path = infer_video(
+        pipe, vae, boundary, device,
+        sample_size=sample_size,
+        video_length=args.video_length,
+        validation_image_start=args.image_path,
+        prompt=prompt,
+        save_path=args.output_path,
+        negative_prompt=negative_prompt,
+        seed=args.seed,
+        guidance_scale=args.guidance_scale,
+        num_inference_steps=args.num_inference_steps,
+    )
+    print(f"Video saved to: {video_path}")

@@ -1,6 +1,14 @@
 # FFGO: First Frame is the Place to Go For Video Content Custimization
 
-FFGO triggers I2V models ability to fuse any objects without modifying the model architecture. It can be easily trained with 20-50 video examples.
+**Official repository for the,  "First Frame is the Place to Go For Video Content Custimization"**
+
+\[[Website](http://firstframego.github.io)\] 
+\[[Paper]()\] 
+
+
+
+![teaser.gif](./git.gif)
+
 
 **🤗 Lora Adapters on Huggingface:**  
 - [FFGO-Lora-Adapter](https://huggingface.co/Video-Customization/FFGO-Lora-Adapter)

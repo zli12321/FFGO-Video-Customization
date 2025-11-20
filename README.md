@@ -3,7 +3,7 @@
 **Official repository for the,  "First Frame is the Place to Go For Video Content Custimization"**
 
 \[[Website](http://firstframego.github.io)\] 
-\[[Paper]()\] 
+\[[Paper](https://arxiv.org/abs/2511.15700)\] 
 
 
 

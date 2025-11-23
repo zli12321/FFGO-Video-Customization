@@ -10,6 +10,9 @@
 ![teaser.gif](./asset/git.gif)
 
 
+### Coming soon
+- TODOs: train and release smaller model sizes - Hunyuan 1.5B or Wan2.2 5B
+
 **🤗 Lora Adapters on Huggingface:**  
 - [FFGO-Lora-Adapter](https://huggingface.co/Video-Customization/FFGO-Lora-Adapter)
 

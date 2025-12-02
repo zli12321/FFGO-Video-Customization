@@ -6,7 +6,7 @@
 [[Website](http://firstframego.github.io)] | [[Paper](https://arxiv.org/abs/2511.15700)] | [[🔴 Real User Demo](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1676)]
 
 **中文:**
-[[新智元](https://mp.weixin.qq.com/s/XQGmskJqqFdKx4vCc45tDA)] | [[小红书](https://www.xiaohongshu.com/explore/692472cf0000000019024808?app_platform=ios&app_version=9.4&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBst8-6STDDJlmUt_EuqFpeUvSAOZeL80OgCoH2udlcfk=&author_share=1&xhsshare=WeixinSession&shareRedId=ODk4ODQ6O0s2NzUyOTgwNjdJOThINTtA&apptime=1764427182&share_id=d3e0939c39fc4725b52e1ccc5cfdb7fe&wechatWid=4881b3d3dc6cef85857b94047cfef160&wechatOrigin=menu)] | [[bilibili](https://www.bilibili.com/video/BV1zRUXBKEug/?share_source=copy_web&vd_source=35f2f9907d2d7e3401fa4d46dcca7fbe)]
+[[新智元](https://mp.weixin.qq.com/s/XQGmskJqqFdKx4vCc45tDA)] | [[bilibili](https://www.bilibili.com/video/BV1zRUXBKEug/?share_source=copy_web&vd_source=35f2f9907d2d7e3401fa4d46dcca7fbe)]
 
 
 ![teaser.gif](./asset/git.gif)

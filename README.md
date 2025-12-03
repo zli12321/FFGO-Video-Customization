@@ -6,7 +6,7 @@
 [[Website](http://firstframego.github.io)] | [[Paper](https://arxiv.org/abs/2511.15700)] | [[🔴 YouTube: Unofficial Community Showcase](https://www.youtube.com/watch?v=Dks3q5w7sdw)] | [[🔴 Real User Demo](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1676)]
 
 **中文:**
-[[新智元](https://mp.weixin.qq.com/s/XQGmskJqqFdKx4vCc45tDA)] | [[bilibili](https://www.bilibili.com/video/BV1zRUXBKEug/?share_source=copy_web&vd_source=35f2f9907d2d7e3401fa4d46dcca7fbe)]
+[[新智元](https://mp.weixin.qq.com/s/XQGmskJqqFdKx4vCc45tDA)] | [[bilibili](https://www.bilibili.com/video/BV1DQSzB9Eo7/)]
 
 
 ![teaser.gif](./asset/git.gif)

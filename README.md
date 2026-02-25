@@ -1,6 +1,6 @@
-# FFGO: First Frame is the Place to Go For Video Content Custimization
+# [CVPR 2026] FFGO: First Frame is the Place to Go For Video Content Custimization
 
-**Official repository for the,  "First Frame is the Place to Go For Video Content Custimization"**
+**Official repository for the CVPR 2026 Paper,  "First Frame is the Place to Go For Video Content Custimization"**
 
 **English:**
 [[Website](http://firstframego.github.io)] | [[Paper](https://arxiv.org/abs/2511.15700)] | [[🔴 YouTube: Unofficial Community Showcase](https://www.youtube.com/watch?v=Dks3q5w7sdw)] | [[🔴 Real User Demo](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1676)]

@@ -1,3 +1,34 @@
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=zli12321&project=FFGO-Video-Customization&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # [CVPR 2026] FFGO: First Frame is the Place to Go For Video Content Custimization
 
 **Official repository for the CVPR 2026 Paper,  "First Frame is the Place to Go For Video Content Custimization"**
